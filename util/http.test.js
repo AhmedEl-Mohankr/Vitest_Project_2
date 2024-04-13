@@ -4,7 +4,6 @@ import { HttpError } from "./errors";
 
 const testResponseData = { testKey: "testData" };
 
-//This is the replacement for the fetch function.
 const testFetch = vi.fn((url, options) => {
   return new Promise((resolve, reject) => {
     if (typeof options.body !== typeof "string") {
